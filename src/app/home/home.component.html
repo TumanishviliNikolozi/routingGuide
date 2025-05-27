@@ -33,7 +33,52 @@
         <p>გზების შექმნის შემდეგ, საჭიროა რომ შევქმნათ მექანიზმი, რომელიც მოგვცემს საშუალებას ღილაკზე დაკლიკებით გადავიდეთ სხვა გვერდებზე, მაგალითად შევქმნათ ნავიგაცია header კომპონენტში.</p>
         <img src="images/navigation.png" alt="navigation">
     </section>
+</main>
 
-    
 
+<header>
+    <h2>routing-ის გამოყენება</h2>
+</header>
+
+
+<main>
+    <section>
+        <h4>ერთი კომპონენტიდან მეორეში ინფორმაციის გადატანა.</h4>
+        <p>იმ კომპონენტის typescript-ში საიდანაც იგზავნება ინფორმაცია უნდა შეიქმნას constructor() და მასში გამოვიძახოთ Router:</p>
+        <img src="images/Router.png" alt="Router">
+        <p>კონსტრუქტორის შემდეგ კი გადასასვლელი მექანიზმი</p>
+        <img src="images/goTo.png" alt="go to">
+        <p>ამის შემდეგ კი კომპონენტის html-ში შევქმნათ ღილაკი.</p>
+        <img src="images/idButton.png" alt="id button">
+        <p>თუმცა ამის შემდეგ გვჭირდება დავამატოთ გზა app.routes.ts -ში.</p>
+        <img src="images/sendId.png" alt="send id">
+        <p>app.routes.ts -ის საშუალებით, მაგალითად id-ს გაგზავნა:</p>
+        <button (click)="goTo()">გადადი აქ</button>
+        <p>ამ ღილაკზე დაჭერით გადავალთ test-page-ზე და თან წავიღებთ id-ს URL-ის გამოყენებით, რა დროსაც გადავალთ სასურველ გვერდზე და მივიღებთ შედეგს:</p>
+        <img src="images/URL.png" alt="URL">
+        <p>PS: ამ გზით id-ს გაგზავნა სავალდებულო არაა, შესაძლებელია ტექსტური ან სხვა ტიპის ინფორმაციის გაგზავნაც, თუმცა მხოლოდ ერთის</p>
+    </section>
+
+    <section>
+        <h4>ისმის კითხვა, როგორ მივიღოთ გაგზავნილი id-ს მნიშვნელობა?</h4>
+        <p>ამისათვის, როგორც წინა შემთხვევაში გავაგზავნეთ ინფორმაცია Router-ის საშუალებით, ახლაც გვჭირდება გზა რათა მიღებული ინფორმაცია გამოვიყენოთ. მაგრამ ამ შემთხვევაში ვიყენებთ ActivatedRoute-ს.</p>
+        <p>თუმცა ახლა ამ ხერხს ვიყენებთ იმ კომპონენტში სადაც უნდა მივიღოთ ინფორმაცია, მაგალითად test-page.component.ts -ში:</p>
+        <img src="images/activatedRoute.png" alt="activated route">
+        <p>ამის შემდეგ შეგვიძლია გამოვიყენოთ implement onInit და id მივიღოთ:</p>
+        <img src="images/onInit.png" alt="onInit">
+        <img src="images/ngOnInit.png" alt="ngOnInit">
+        <p>არსებობს ინფორმაციის მიღების მეორე, რეაქტიული და განახლებადი გზა:</p>
+        <img src="images/paramMapSub.png" alt="paramMapSub">
+    </section>
+
+    <section>
+        <h4>რა ვქნათ როცა გვჭირდება არა ერთი არამედ რამდენიმე პარამეტრის გაგზავნა?</h4>
+        <p>ასეთ შემთხვევაში არსებობს queryParams მეთოდი, რომელიც შეიძლება ობიექტის სახით გაიგზავნოს სხვა გვერდზე, მაგრამ ამ შემთხვევაში არ არის საჭირო app.routes.ts -ში რამის ჩამატება.</p>
+        <img src="images/queryparams.png" alt="queryParams">
+        <button (click)="sendQueryParams()">გადადი აქ</button>
+        <p>ხოლო ინფორმაციის მიმღებ კომპონენტში:</p>
+        <img src="images/queryparamsSub.png" alt="queryParamsSub">
+        <p>იმ შემთხვევაში თუ ამ ობიექტში არის ნიცხვები მათი ტექსტიდან გადმოსაყვანად დაგჭირდებათ JSON.parse() ან +, მაგალითად ასე:</p>
+        <img src="images/inNumber.png" alt="inNumber">
+    </section>
 </main>

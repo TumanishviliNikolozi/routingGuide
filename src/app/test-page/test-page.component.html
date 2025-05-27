@@ -1,1 +1,20 @@
-<p>test-page works!</p>
+<header>
+    <h1>მიღებული ინფორმაცია:</h1>
+</header>
+
+<main>
+    @if(snapId !== null && snapId !== undefined || paramsMapId !== null && paramsMapId !== undefined){
+        <section>
+            <p>მიღებული id: {{snapId}}</p>
+            <p>მიღებული id2: {{paramsMapId}}</p>
+        </section>
+    }
+
+    @if(QPObjectId !== null || QPObjectId !== undefined){
+        <section>
+            <p>ობიექტის id: {{QPObjectId}}</p>
+            <p>ობიექტის სახელი: {{QPObject.name}}</p>
+            <p>ობიექტის გვარი: {{QPObject.surname}}</p>
+        </section>
+    }
+</main>
