@@ -1,0 +1,39 @@
+<header>
+    <h1>როგორ გამოვიყენოთ routing ანგულარში.</h1>
+</header>
+
+<main>
+    <section>
+        <h4>ნაბიჯი 1:</h4>
+        <p>დავაგენერიროთ საჭირო კომპონენტები ისეთი როგორიცაა header, footer, pageNotFound და ყველა ის გვერდი, რომელიც
+            გესაჭიროებათ საიტის შიგთავსის გამოსატანად(ორი ან მეტი).</p>
+        <img src="images/generate component(long).png" alt="generate component(long)">
+
+        <p>ან შემოკლებით</p>
+        <img src="images/generate component(short).png" alt="generate component(short)">
+    </section>
+
+    <section>
+        <h4>ნაბიჯი 2:</h4>
+        <p>ავაგოთ სტრუქტურა app.component.html -ში, მაგალითად ასე:</p>
+        <img src="images/app-html structure.png" alt="app-html structure">
+        <p>PS: ეს სტრუქტურა შეიძლება შეიცვალოს საჭიროებისამებრ.</p>
+    </section>
+
+    <section>
+        <h4>ნაბიჯი 3:</h4>
+        <p>app.routes.ts -ში ავაწყოთ გზები, რომლის საშუალებითაც ანგულარი შეძლებს გამოიტანოს ზუსტად იმ კომპონენტის შიგთავსი, რომელსაც მომხმარებელი აირჩევს.</p>
+        <img src="images/paths.png" alt="paths">
+        <p>PS: სავალდებულო არაა, მაგრამ კარგი პრაქტიკაა ამ გზების დაწყება redirectTo-ი, თუმცა wildcard ამ შემთხვევაში(pageNotFound),
+             საჭიროა რომ იყოს ბოლო, წაკითხვის თანმიმდევრობიდან გამომდინარე.</p>
+    </section>
+
+    <section>
+        <h4>ნაბიჯი 4:</h4>
+        <p>გზების შექმნის შემდეგ, საჭიროა რომ შევქმნათ მექანიზმი, რომელიც მოგვცემს საშუალებას ღილაკზე დაკლიკებით გადავიდეთ სხვა გვერდებზე, მაგალითად შევქმნათ ნავიგაცია header კომპონენტში.</p>
+        <img src="images/navigation.png" alt="navigation">
+    </section>
+
+    
+
+</main>
