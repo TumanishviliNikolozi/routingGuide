@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-test-page',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './test-page.component.html',
   styleUrl: './test-page.component.scss'
 })
