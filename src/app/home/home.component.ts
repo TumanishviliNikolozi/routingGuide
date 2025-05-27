@@ -25,4 +25,14 @@ export class HomeComponent {
       }
     })
   }
+
+  sendQueryParamsMulty(){
+    this.router.navigate(['/test-page'], {
+      queryParams: {
+        mapId: [1, 3, 5],
+        mapName: ['John', 'Alex', 'Gordon'],
+        mapSurname: ['Doe', 'flex', 'Ramsey']
+      }
+    })
+  }
 }

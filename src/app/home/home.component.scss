@@ -45,6 +45,14 @@ main{
             border: 2px solid white;
             background-color: grey;
             font-size: 20px;
+            cursor: pointer;
+            transition: linear 0.25s;
+
+            &:hover{
+                transform: translateY(-3px);
+                background-color: blue;
+                color: white;
+            }
         }
     }
 }

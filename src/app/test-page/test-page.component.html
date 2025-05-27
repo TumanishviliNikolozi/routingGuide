@@ -10,11 +10,22 @@
         </section>
     }
 
-    @if(QPObjectId !== null || QPObjectId !== undefined){
+    @if(yesOrNo){
         <section>
             <p>ობიექტის id: {{QPObjectId}}</p>
             <p>ობიექტის სახელი: {{QPObject.name}}</p>
             <p>ობიექტის გვარი: {{QPObject.surname}}</p>
         </section>
+    }
+
+    @if(mapId.length !== 0 || mapName.length !== 0 || mapSurname.length !== 0){
+
+    @for (item of mapId; track $index; let i = $index) {
+            <section>
+                <p>ობიექტის id {{i + 1}}: {{mapId[i]}}</p>
+                <p>ობიექტის სახელი {{i + 1}}: {{mapName[i]}}</p>
+                <p>ობიექტის გვარი {{i + 1}}: {{mapSurname[i]}}</p>
+            </section>
+        }
     }
 </main>

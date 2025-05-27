@@ -81,4 +81,18 @@
         <p>იმ შემთხვევაში თუ ამ ობიექტში არის ნიცხვები მათი ტექსტიდან გადმოსაყვანად დაგჭირდებათ JSON.parse() ან +, მაგალითად ასე:</p>
         <img src="images/inNumber.png" alt="inNumber">
     </section>
+
+    <section>
+        <h4>როგორ მოვიქცეთ თუ queryParams-ით გადაცემულ პაარამეტრებს ერთდროულად აქვთ რამდენიმე მნიშვნელობა.</h4>
+        <p>განვიხილოთ ასეთი შემთხვევა. დავუშვათ ვაგზავნით ობიექტს, რომელიც შეიცავს მასივებს:</p>
+        <img src="images/queryparamsmap.png" alt="queryParamsMap">
+        <p>იქიდან გამომდინარე, რომ queryParams-ს შეეძლება ამოიღოს ამ მასივების მხოლოდ პირველი წევრები, იგი არ გვაწყობს, ამიტომ უნდა გამოვიყენოთ queryParamsMap ინფორმაციის მიმღებ კომპონენტში.</p>
+        <img src="images/queryparamsmapget.png" alt="queryParamsMapGet">
+        <button (click)="sendQueryParamsMulty()">გადადი აქ</button>
+    </section>
+
+    <section>
+        <p>გავითვალისწინოთ, რომ ისევე როგორც app.routes.ts-ში გაწერილი გზის საშუალებით ინფორმაციის გაგზავნის დროს, ასევე queryParams-ის და queryParamsMap-ის გამოყენების დროსაც გვჭირდება, 
+            რომ გამგზავნ კომპონენტის კონსტრუქტორში გამოვიძახოთ Router, ხოლო მიმღებისაში ActivatedRoute.</p>
+    </section>
 </main>
